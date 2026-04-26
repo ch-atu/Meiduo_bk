@@ -28,7 +28,7 @@ class User(AbstractUser):
         token = serializer.dumps(data).decode()
 
         # 3.拼接激活url
-        return 'http://www.meiduo.site:8080/success_verify_email.html?token=' + token
+        return 'http://127.0.0.1:8080/success_verify_email.html?token=' + token
 
     @staticmethod
     def check_verify_email_token(token):
