@@ -36,7 +36,6 @@ class UsernameCountView(APIView):
     def get(self, request, username):
         # 查询user表
         count = User.objects.filter(username=username).count()
-
         # 包装响应数据
         data = {
             'username': username,
